@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+
+  :root {
+    --envited-400: theme('colors.envited.400');
+    --envited-300: theme('colors.envited.300');
+    --envited-200: theme('colors.envited.200');
+    --envited-100: theme('colors.envited.100');
+    --envited-purple-300: theme('colors.envited-purple.300');
+    --envited-purple-200: theme('colors.envited-purple.200');
+    --envited-purple-100: theme('colors.envited-purple.100');
+  }
+
+  .bg-grad {
+    background: linear-gradient(0deg, #F6F2FF, var(--envited-purple-100)), #FBFAFF;
+  }
+
+  .container {
+    width: 100%
+  }
+
+  input,
+  textarea {
+    @apply w-full;
+    @apply rounded-lg;
+    @apply w-full;
+    @apply p-3;
+    @apply md:p-4;
+    @apply bg-gray-100;
+    @apply mb-6;
+  }
+
+  input:focus,
+  textarea:focus {
+    background-color: rgba(132, 86, 236, 0.2);
+  }
+
+  .input-label {
+    @apply text-base;
+    @apply text-envited-400;
+    @apply font-semibold;
+    @apply mb-2
+  }
+
+  .center {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
+}
+
+.typed-cursor, .typed-content {
+  background: linear-gradient(90deg, var(--envited-200) 24.2%, var(--envited-100) 120.46%);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.create-event {
+  background: linear-gradient(90deg, var(--envited-300) 3.25%, var(--envited-100) 100%);
+  @apply rounded-[10px];
+  @apply max-w-[320px]
+}
+
+.event-icon {
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+border-radius: 10px;
+}
